@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main1.css">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mode" style="font-size:20px; color:antiquewhite"> Select your desired Mode of Play:</p> <br />
+    
+        <div class= "firstbox">
+    <div class="container">
+<label class = "checkboxcontainer"> Easy
+    <input type="checkbox" id="easymode" > 
+    <span class="checkmark"></span>
+</label>
+   <label class = "checkboxcontainer">Medium<input type="checkbox" id="mediummode" > 
+    <span class="checkmark"></span>
+</label>
+<label class = "checkboxcontainer">Hard
+  <input type="checkbox" id="hardmode" > 
+  <span class="checkmark"></span>
+</label>
+</div>
+  <p id="error"></p>
+    <button id="start" onclick="this.disabled = true">Start</button>
+    </div>
+    
+   
+<div class="question-box">
+<div id="arrayOutput"> </div>
+<div class="question-container">
+    <p id="category"></p> <br/>  <br/>
+    <div class="question-bottom">
+        <div class="mark"></div>
+    <p id="question"> </p> <br/> <br/>
+
+    </div>
+  </div>
+  <p id="answers"></p> 
+  </div> 
+  <div class= "second-box">
+    <p id ="result"></p>
+    <p id="answer"></p> 
+    <button id="submitAnswer"> Submit Answer</button>
+
+    <button id= "clue"> Show Answer  </button>
+</div>
+    
+    <br/>
+    <div class="respbuttons">
+    <button id="next"> <span>Next</span> </button>
+    <button id="restart">ReStart </button>
+     </div>
+
+<script type="text/javascript" src="js/main1.js"></script>
+   <!--<script src="Trivia.js"></script>-->
+    <script src="https://kit.fontawesome.com/4448a8754e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
