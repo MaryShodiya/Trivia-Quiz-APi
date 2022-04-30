@@ -17,7 +17,7 @@ function addButton(){
 
     playBtn.appendChild(createBtn).addEventListener('click', getNewPage)
   function getNewPage() {
-        location.href= "/Users/user/API-samples/Trivia quiz/main.html";
+        location.href= "main.html";
     }
 }
 
