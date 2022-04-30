@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
     }
+    html{
+      min-height: 100%;
+    }
 
 body{
     /*background: linear-gradient(90deg, hsla(107, 7%, 74%, 1) 0%, hsla(188, 36%, 52%, 1) 33.333333333333336%, hsla(161, 82%, 27%, 1) 66.66666666666667%, hsla(220, 15%, 20%, 1) 100%);*/
@@ -15,7 +18,6 @@ body{
     font-weight: bold;
     font-size:15px;
 }
-
 
 
 .checkboxcontainer{
@@ -102,6 +104,7 @@ body{
   border-radius:45px;
   background-color:transparent;
 }
+
 
 .question-container{
   border-radius:10px;

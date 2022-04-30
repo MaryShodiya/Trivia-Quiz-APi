@@ -1,6 +1,21 @@
+
+
+
+
+
+
 let url = ''
   let currentData = 0
-   document.querySelector('#start').addEventListener('click' , getOutput) 
+   document.querySelector('#start').addEventListener('click' , revealDiv, getOutput) 
+   function revealDiv(){
+    let hidden = document.querySelector('.hidden')
+    if(hidden.style.display == 'none'){
+        hidden.style.display = 'block'
+    }else{
+        hidden.style.display = 'none'
+    }
+    getOutput();
+}
        function getOutput(){
       let easymode = document.querySelector('#easymode');
       let mediummode = document.querySelector('#mediummode');
