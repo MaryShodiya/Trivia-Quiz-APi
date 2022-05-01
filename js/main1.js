@@ -6,6 +6,7 @@
 
 let url = ''
   let currentData = 0
+  let scores = 1
    document.querySelector('#start').addEventListener('click' , revealDiv, getOutput) 
    function revealDiv(){
     let hidden = document.querySelector('.hidden')
@@ -65,14 +66,18 @@ document.querySelector('#submitAnswer').addEventListener('click', submitAnswer)
        
  if ( (firstanswer.checked && firstanswer.value === data.results[currentData].correct_answer) || (secondanswer.checked && secondanswer.value === data.results[currentData].correct_answer) 
       || (thirdanswer.checked && thirdanswer.value === data.results[currentData].correct_answer) || (fourthanswer.checked && fourthanswer.value === data.results[currentData].correct_answer) ){
-        document.querySelector('#result').innerText= "YIPEE.. YOU PASSED THIS TEST"
+        document.querySelector('#result').innerText= "CORRECT!"
+        document.getElementById('score').innerText= "Your Score: " + scores++
     }else{
-        document.querySelector('#result').innerText= "SORRY, TRY AGAIN"
+        document.querySelector('#result').innerText= "WRONG"
+        
        }
     }
      document.querySelector('#clue').addEventListener('click', showAnswer)
          function showAnswer(){
+             document.querySelector('#warning').innerText= "Warning! You will lose a mark"
         document.querySelector('#answer').innerText= data.results[currentData].correct_answer
+        document.getElementById('score').innerText= "Your Score: " + scores-1
      }
     
       })
@@ -83,11 +88,12 @@ document.querySelector('#submitAnswer').addEventListener('click', submitAnswer)
        }
 
 
-       document.querySelector('#next').addEventListener('click', clearNewPage)
-       function clearNewPage() {
+       document.querySelector('#next').addEventListener('click', getNewPage)
+       function getNewPage() {
+            
            document.querySelector('#answers').innerHTML ='' 
            document.querySelector('#answer').innerText = ''
-        document.querySelector('#result').innerText= ''
+           document.querySelector('#result').innerText= ''
 
            currentData++
            getOutput();  
@@ -95,9 +101,18 @@ document.querySelector('#submitAnswer').addEventListener('click', submitAnswer)
 
        document.getElementById('restart').addEventListener('click', startAgain)
        function startAgain() {
-           clearNewPage();
-        currentData = 0;
+        document.querySelector('#question').innerText=''
+        document.querySelector('#answers').innerHTML ='' 
+        document.querySelector('#answer').innerText = ''
+        document.querySelector('#result').innerText= ''
+        document.querySelector('#category').innerText=''
+
+          // getNewPage();
+        //currentData = 0;
        }
+
+       //scores
+       
 
     
 
