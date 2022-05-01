@@ -13,7 +13,6 @@ body{
     background-position: center ;
     background-repeat: no-repeat;
     background-size:cover;
-    font-family: "GrapeNuts" Roboto, "Helvetica Neue", "Helvetica";
     font-weight: bold;
     font-size:15px;
 }
@@ -102,6 +101,7 @@ body{
   margin-left: 80px;
   border-radius:45px;
   background-color:transparent;
+  font-family: 'Old Standard TT', serif;
 }
 
 
@@ -124,7 +124,7 @@ body{
   padding: 10px;
   height:140px;
   margin-left:50px;
-
+  font-family: 'Lobster Two', cursive;
 }
 
 
@@ -238,6 +238,25 @@ border-top-right-radius: 20px;
   right:0;
 }
 
+#warnbutton{
+  background-color: burlywood;
+  border: none;
+  color: brown;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.6;
+  transition: 0.3s;
+  
+}
+
+#warnbutton:hover{
+  opacity: 1;
+  background-color:#5c3e28;
+  color:white;
+}
+
+
 #restart{
   position: relative;
   background-color:rgb(4, 5, 5);
@@ -277,7 +296,7 @@ border-top-right-radius: 20px;
 
   .question-box{
     width:350px;
-    height:580px;
+    height:680px;
     margin-left:65px;
     margin-top: 115px;
   }
@@ -310,7 +329,7 @@ border-top-right-radius: 20px;
  #answers{
    width:315px;
    padding-left:6px;
-   height:100px;
+   height:200px;
  }
  .second-box{
    width:440px;
@@ -345,7 +364,8 @@ border-top-right-radius: 20px;
   @media only screen and (min-width: 600px) {
     .question-box{
       margin-left: 70px;
-      height: 520px;
+      height: 620px;
+      width: 520px;
   
     }
     
@@ -356,15 +376,21 @@ border-top-right-radius: 20px;
       height:350px;
     }
     #answers{
-      height:100px;
-      width: 460px;
+      height:200px;
+      width: 500px;
+      border: 7px solid purple;
     }
   }
   @media only screen and (min-width: 768px) {
-    
+    .question-box{
+      width:600px;
+    }
+
+
     #answers{
       width:550px;
       margin-left: 21px;
+      border:6px solid salmon;
 
     }
     .respbuttons{
@@ -381,7 +407,8 @@ border-top-right-radius: 20px;
   }
   @media only screen and (min-width: 992px) {
    #answers{
-     width:730px;
+     width:550px;
+     border:8px solid yellow;
    } 
    #question{
      margin-left:150px;
@@ -393,8 +420,15 @@ border-top-right-radius: 20px;
 
   @media only screen and (min-width: 1200px) {
     #answers{
-      width:800px;
-      margin-left:100px;
+      width:550px;
 
+    }
+
+    #question{
+      margin-left: 20px;
+      
+    }
+    .mark{
+      margin: 180px 350px
     }
   }

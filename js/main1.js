@@ -76,8 +76,9 @@ document.querySelector('#submitAnswer').addEventListener('click', submitAnswer)
      document.querySelector('#clue').addEventListener('click', showAnswer)
          function showAnswer(){
              document.querySelector('#warning').innerText= "Warning! You will lose a mark"
+             document.getElementById('warnbutton').style.display= 'inline-block'
         document.querySelector('#answer').innerText= data.results[currentData].correct_answer
-        document.getElementById('score').innerText= "Your Score: " + scores-1
+        document.getElementById('score').innerText= "Your Score: " + scores--
      }
     
       })
@@ -107,16 +108,10 @@ document.querySelector('#submitAnswer').addEventListener('click', submitAnswer)
         document.querySelector('#result').innerText= ''
         document.querySelector('#category').innerText=''
 
-          // getNewPage();
-        //currentData = 0;
        }
-
-       //scores
-       
-
-    
-
-
-
-
-    
+        
+        document.getElementById('warnbutton').addEventListener('click', hideAlert)
+        function hideAlert() {
+            document.querySelector('#warning').innerText= ''
+            document.getElementById('warnbutton').style.display= 'none'
+        }
