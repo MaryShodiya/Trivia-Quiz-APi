@@ -378,7 +378,6 @@ border-top-right-radius: 20px;
     #answers{
       height:200px;
       width: 500px;
-      border: 7px solid purple;
     }
   }
   @media only screen and (min-width: 768px) {
@@ -390,7 +389,7 @@ border-top-right-radius: 20px;
     #answers{
       width:550px;
       margin-left: 21px;
-      border:6px solid salmon;
+      
 
     }
     .respbuttons{
@@ -408,7 +407,7 @@ border-top-right-radius: 20px;
   @media only screen and (min-width: 992px) {
    #answers{
      width:550px;
-     border:8px solid yellow;
+     
    } 
    #question{
      margin-left:150px;
