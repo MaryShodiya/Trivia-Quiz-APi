@@ -1,12 +1,12 @@
-## Travia Quiz Project
+# Trivia Quiz Project
 
-The Travia Quiz Project is a two-page application designed from the [quiz api](https://opentdb.com/api_config.php)
+The Trivia Quiz Project is a two-page application designed from the [quiz api](https://opentdb.com/api_config.php)
 
 [Tap to access the project here](https://diya-trivia-quiz.netlify.app)
 
 <img align="right" width="300" src="demo.jpeg" alt="travia quiz" />
 
-## The Process
+### The Process
 
 Tech Used: HTML, CSS, JavaScript, REST API
 
