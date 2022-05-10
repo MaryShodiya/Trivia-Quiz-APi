@@ -1,9 +1,3 @@
-
-
-
-
-
-
 let url = ''
   let currentData = 0
   let scores = 1
