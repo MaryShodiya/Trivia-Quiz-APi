@@ -1,6 +1,6 @@
 let url = '' //url for api address
   let currentData = 0 //
-  let scores = 1 //current score data
+  let scores = 0 //current score data
 
   //button to reveal hidden div
    document.querySelector('#start').addEventListener('click' , revealDiv, getOutput) 
@@ -73,8 +73,9 @@ document.querySelector('#submitAnswer').addEventListener('click', submitAnswer)
       //conditionals to tell the correct answer from the checkboxes selected
  if ( (firstanswer.checked && firstanswer.value === data.results[currentData].correct_answer) || (secondanswer.checked && secondanswer.value === data.results[currentData].correct_answer) 
       || (thirdanswer.checked && thirdanswer.value === data.results[currentData].correct_answer) || (fourthanswer.checked && fourthanswer.value === data.results[currentData].correct_answer) ){
+        scores++
         document.querySelector('#result').innerText= "CORRECT!"
-        document.getElementById('score').innerText= "Your Score: " + scores++
+        document.getElementById('score').innerText= `Your Score: ${scores++} `
     }else{
         document.querySelector('#result').innerText= "WRONG"
         
