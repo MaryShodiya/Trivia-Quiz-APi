@@ -1,6 +1,7 @@
 let url = '' //url for api address
-  let currentData = 0 //
+  let currentData = 0 
   let scores = 0 //current score data
+  
 
   //button to reveal hidden div
    document.querySelector('#start').addEventListener('click' , revealDiv, getOutput) 
@@ -8,6 +9,8 @@ let url = '' //url for api address
     let hidden = document.querySelector('.hidden')
     if(hidden.style.display == 'none'){
         hidden.style.display = 'block'
+        document.getElementById('score').innerText= "Your Score: "
+
     }else{
         hidden.style.display = 'none'
     }
@@ -24,11 +27,11 @@ let url = '' //url for api address
       (easymode.checked == true && hardmode.checked == true) || (hardmode.checked== true && mediummode.checked)){
         document.querySelector('#error').innerText= "Error! More than one value selected. Please select only one mode of play from the boxes"
     }else if(easymode.checked == true){ //url for easy questions- diaplays the set of questions if easy mode is selected
-          url = "https://opentdb.com/api.php?amount=48&difficulty=easy"
+          url = "https://opentdb.com/api.php?amount=3&difficulty=easy"
       }else if (mediummode.checked == true ) {
-          url = "https://opentdb.com/api.php?amount=48&difficulty=medium" //url for fairly difficult questions where medium mode is selected
+          url = "https://opentdb.com/api.php?amount=3&difficulty=medium" //url for fairly difficult questions where medium mode is selected
       }else if(hardmode.checked == true){
-          url = "https://opentdb.com/api.php?amount=48&difficulty=hard" //url for very hard questions where hard mode is selected
+          url = "https://opentdb.com/api.php?amount=3&difficulty=hard" //url for very hard questions where hard mode is selected
       }else{
           document.querySelector('#error').innerText= "Error! No Value Selected. Please select a mode of play" //error message where a mode is not selected
       }
@@ -73,14 +76,20 @@ document.querySelector('#submitAnswer').addEventListener('click', submitAnswer)
       //conditionals to tell the correct answer from the checkboxes selected
  if ( (firstanswer.checked && firstanswer.value === data.results[currentData].correct_answer) || (secondanswer.checked && secondanswer.value === data.results[currentData].correct_answer) 
       || (thirdanswer.checked && thirdanswer.value === data.results[currentData].correct_answer) || (fourthanswer.checked && fourthanswer.value === data.results[currentData].correct_answer) ){
-        scores++
         document.querySelector('#result').innerText= "CORRECT!"
-        document.getElementById('score').innerText= `Your Score: ${scores++} `
+        document.getElementById('score').innerText= ` Your score : ${scores++}` //increases score by 1
     }else{
-        document.querySelector('#result').innerText= "WRONG"
+        document.querySelector('#result').innerText= "WRONG"  
         
        }
     }
+    //defines the number of questions in the length of array
+   let numOfQuestions = data.results[currentData].question.length
+   if(numOfQuestions === 0 ){
+    document.getElementById('score').innerText= `Your  Total Score is ${scores} out of ${numOfQuestions}` 
+   }
+
+
     //clue options to tell the user the correct answer
      document.querySelector('#clue').addEventListener('click', showAnswer)
          function showAnswer(){

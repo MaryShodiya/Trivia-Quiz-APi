@@ -16,7 +16,12 @@ body{
     font-weight: bold;
     font-size:15px;
 }
+.fa-volume-up{
+  border: 1px solid black;
+  width: 30px;
+  background-color: white;
 
+}
 
 .checkboxcontainer{
     display: inline;
